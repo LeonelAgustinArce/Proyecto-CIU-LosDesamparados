@@ -1,16 +1,36 @@
-# React + Vite
+# Cafetería Online - Luna & Granos Café ☕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descripción
+Este proyecto es una aplicación web desarrollada en **React** para la materia *Construcción de Interfaces de Usuario*.  
+La app permite a los clientes de **Luna & Granos Café**:
+- Ver la carta de productos con imágenes, precios y descripciones.
+- Agregar productos a un carrito de pedidos.
+- Confirmar el pedido.
+- Enviar consultas o realizar reservas a través de un formulario.
+- Navegar fácilmente entre secciones con una interfaz moderna y responsive.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías utilizadas
+- React con componentes funcionales y hooks (`useState`, `useEffect`).
+- React Router DOM para la navegación.
+- Framework CSS: Bootstrap.
+- Buenas prácticas de diseño UX/UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Estructura de la aplicación
+- **Inicio**: Logo, descripción e imagen principal.
+- **Carta de productos**: Lista de al menos 8 productos, cargados desde un array de objetos.
+- **Carrito**: Visualización de productos seleccionados, cantidades y total.
+- **Contacto/Reservas**: Formulario controlado con validaciones.
+- **Navegación**: Barra para acceder a todas las secciones.
 
-## React Compiler
+## ⚙️ Instalación y ejecución en local
+- Requisitos previos: Tener instalado Node.js (versión LTS recomendada).
+- Clonar el repositorio:
+https://github.com/LeonelAgustinArce/Proyecto-CIU-LosDesamparados/
+- En la terminal del vs code posicionarse dentro de la carpeta del proyecto **cd Proyecto-CIU-LosDesamparados**.
+- Ejecturar el comando **npm install**.
+- Iniciar el proyecto: **npm run dev**.
+- Hacer click en el localhost de la terminal.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👨‍💻 Integrantes
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+PONER LOS INTEGRANTES CON EL CORREO ELECTRONICO
