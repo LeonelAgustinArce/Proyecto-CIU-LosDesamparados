@@ -9,10 +9,10 @@ src/
 │   └── ProductCard.jsx 
 ├── pages/
 │   ├── Home.jsx         --Empezar por esto--
-│   ├── Menu.jsx         --Esto es el NAV - Debe tener (Inicio - Carta - Carrito - contacto) 
-│   ├── Cart.jsx         --Vamos a utilizar la (imagen,nombre,precio...) en el medio, ademas de unas flechas que
+│   ├── Carta.jsx         --Esto es el NAV - Debe tener (Inicio - Carta - Carrito - contacto) 
+│   ├── Carrito.jsx         --Vamos a utilizar la (imagen,nombre,precio...) en el medio, ademas de unas flechas que
     |                      direccionan a el siguiente producto o anterior
-│   └── Contact.jsx      --Ver despues
+│   └── Reserva.jsx      --Ver despues
 ├── data/
 │   └── products.js      --Buscar productos...
 ├── App.jsx
