@@ -16,8 +16,8 @@ function Reserva() {
     <div className="container-fluid bg-light p-5">
       <div className="row">
         <div className="col-12">
-          <h2>Contáctanos</h2>
-          <p>¿Tienes alguna pregunta o comentario? ¡Nos encantaría saber de ti!</p>
+          <h2>Haz tu reserva</h2>
+          <p>¡Te esperamos!</p>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="nombre" className="form-label">Nombre</label>
@@ -37,7 +37,7 @@ function Reserva() {
             </div>
             <div className="mb-3">
               <label htmlFor="mensaje" className="form-label">Mensaje</label>
-              <textarea className="form-control" id="mensaje" rows="3" placeholder="Tu mensaje o detalles de la reserva" value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
+              <textarea className="form-control" id="mensaje" rows="3" placeholder="Detalles de la reserva" value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
             </div>
             <button type="submit" className="btn btn-primary">Enviar</button>
           </form>
