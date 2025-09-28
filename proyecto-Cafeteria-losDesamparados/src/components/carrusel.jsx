@@ -10,7 +10,7 @@ function Carrusel() {
         id="carouselExampleAutoplaying"
         className="carousel slide col-sm-10 col-md-8 col-lg-4"
         data-bs-ride="carousel"
-        style={{ width: '25%' }}
+        style={{ maxWidth: "100%", height: "auto" }}
       >
         <div className="carousel-inner">
           <div className="carousel-item active">

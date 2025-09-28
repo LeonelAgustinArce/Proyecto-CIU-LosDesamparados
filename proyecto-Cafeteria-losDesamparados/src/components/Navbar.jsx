@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          ☕ Café Eteria
+          ☕ Luna & Granos Café
         </Link>
         
         <button 
@@ -25,7 +25,7 @@ function Navbar() {
         </button>
         
         <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
-          <div className="navbar-nav ms-auto">
+          <div className="navbar-nav me-auto">
             <Link className="nav-link" to="/" onClick={() => setIsMenuOpen(false)}>Inicio</Link>
             <Link className="nav-link" to="/carta" onClick={() => setIsMenuOpen(false)}>Carta</Link>
             <Link className="nav-link" to="/carrito" onClick={() => setIsMenuOpen(false)}>Carrito</Link>

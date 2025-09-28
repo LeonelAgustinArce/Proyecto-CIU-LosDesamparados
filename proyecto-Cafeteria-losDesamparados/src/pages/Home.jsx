@@ -21,18 +21,24 @@ function Home() {
         <div className="row justify-content-center w-100">
           <div className="col-md-8 text-center">
             <h1 style={{ color: "white", textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
-              Cafetería Eteria
+              Luna & Granos Café
             </h1>
             <p style={{ color: "white", textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-              No es adicción, es devoción eterna
+              Un espacio para disfrutar de un café excepcional, 
+              en un ambiente que inspira calma y deleite.
             </p>
           </div>
         </div>
       </div>
-
+      
       {/* Carrusel */}
       <div className="bg-white py-5">
         <div className="container">
+          <h2  
+            style={{fontFamily: 'Georgia, serif', letterSpacing: '1px'}}
+          >
+                Recomendados De La Semana
+          </h2>
           <Carrusel />
         </div>
       </div>

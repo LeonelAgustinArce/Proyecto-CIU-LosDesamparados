@@ -10,24 +10,28 @@ import cafe08 from '../assets/cafe-08.png';
 
 function Carta() {
   const productos = [
-    { id: 1, nombre: 'Café Americano', imagen: cafe01 },
-    { id: 2, nombre: 'Café Latte', imagen: cafe02 },
-    { id: 3, nombre: 'Cappuccino', imagen: cafe03 },
-    { id: 4, nombre: 'Café Mocha', imagen: cafe04 },
-    { id: 5, nombre: 'Espresso', imagen: cafe05 },
-    { id: 6, nombre: 'Macchiato', imagen: cafe06 },
-    { id: 7, nombre: 'Iced Coffee', imagen: cafe07 },
-    { id: 8, nombre: 'Café con Leche', imagen: cafe08 },
+    { id: 8, nombre: 'Café con Leche', imagen: cafe08, precio: 1 },
+    { id: 4, nombre: 'Café Mocha',     imagen: cafe04, precio: 1 },
+    { id: 1, nombre: 'Americano',      imagen: cafe01, precio: 1 },
+    { id: 5, nombre: 'Espresso',       imagen: cafe05, precio: 1 },
+    { id: 2, nombre: 'Latte',          imagen: cafe02, precio: 1 },
+    { id: 6, nombre: 'Macchiato',      imagen: cafe06, precio: 1 },
+    { id: 3, nombre: 'Cappuccino',     imagen: cafe03, precio: 1 },
+    { id: 7, nombre: 'Iced Coffee',    imagen: cafe07, precio: 1 },
+    
   ];
 
   return (
     <div className="container-fluid bg-light p-5">
       <div className="row">
         <div className="col-12">
-          <h2>Carta
+          <h2>
+            Carta
           </h2>
           <div>
+              <p>
 
+              </p>
           </div>
         </div>
       </div>
@@ -39,6 +43,7 @@ function Carta() {
               <img src={producto.imagen} className="card-img-top" alt={producto.nombre} />
               <div className="card-body">
                 <h5 className="card-title">{producto.nombre}</h5>
+                <p class="card-text">Precio: ${producto.precio}</p>
                 <button className="btn-minimal">+</button>
               </div>
             </div>
