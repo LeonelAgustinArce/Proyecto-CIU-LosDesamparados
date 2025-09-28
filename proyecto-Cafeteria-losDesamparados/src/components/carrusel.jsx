@@ -1,7 +1,7 @@
 import React from 'react';
-import cafe01 from '../assets/cafe-01.png';
-import cafe02 from '../assets/cafe-04.png';
-import cafe03 from '../assets/cafe-05.png';
+import cafe01 from '../assets/cafe-01.webp';
+import cafe02 from '../assets/cafe-04.webp';
+import cafe03 from '../assets/cafe-05.webp';
 
 function Carrusel() {
   return (
