@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from "react";
 import Americano from '../assets/cafe-01.webp';
 import Latte from '../assets/cafe-02.webp';
 import Cappuccino from '../assets/cafe-03.webp';
@@ -21,7 +22,10 @@ import Acom08 from '../assets/acom-08.webp';
 import Acom09 from '../assets/acom-09.webp';
 import Acom10 from '../assets/acom-10.webp';
 
+
 function Carta() {
+  const [cantidades, setCantidades] = useState(0);
+
   const cafes = [
     { id: 1, nombre: 'Americano', imagen: Americano, precio: 6200 },
     { id: 2, nombre: 'Cappuccino', imagen: Cappuccino, precio: 7800 },
@@ -46,6 +50,12 @@ function Carta() {
     { id: 18, nombre: 'Bizcocho', imagen: Acom09, precio: 3300 },
     { id: 19, nombre: 'Tostada de Aguacate', imagen: Acom10, precio: 4500 },
   ];
+  const agregarAlCarrito = (id) => {
+    setCantidades(prev => ({
+      ...prev,
+      [id]: (prev[id] || 0) + 1  
+    }));
+  };
 
   return (
     <div className="container-fluid bg-light p-5">
@@ -68,7 +78,8 @@ function Carta() {
               <div className="card-body">
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">Precio: ${producto.precio}</p>
-                <button className="btn-minimal"> + </button>
+                <button className="btn-minimal" onClick={() => agregarAlCarrito(producto.id)}> Agregar al carrito</button>
+                <p>Cantidad: {cantidades[producto.id] || 0}</p>
               </div>
             </div>
           </div>
@@ -93,26 +104,13 @@ function Carta() {
               <div className="card-body">
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">Precio: ${producto.precio}</p>
-                <button className="btn-minimal"> + </button>
+                <button className="btn-minimal" onClick={() => agregarAlCarrito(producto.id)}> Agregar al carrito</button>
+                <p>Cantidad: {cantidades[producto.id] || 0}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .btn-minimal {
-          background: none;
-          border: none;
-          font-size: 1.5em; 
-          color: #007bff;
-          cursor: pointer;
-        }
-
-        .btn-minimal:hover {
-          color: #0056b3;
-        }
-      `}</style>
     </div>
   );
 }
