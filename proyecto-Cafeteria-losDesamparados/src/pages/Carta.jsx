@@ -53,7 +53,7 @@ function Carta() {
       {/* Sección Cafés */}
       <div className="row">
         <div className="col-12">
-          <h2>Cafés</h2>
+          <h2  id="inicio-carta">Cafés </h2>
           <div>
             <p>Nuestra selección de 9 cafés exclusivos</p>
           </div>

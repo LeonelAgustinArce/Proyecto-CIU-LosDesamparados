@@ -35,61 +35,62 @@ function Home() {
       <div className="bg-white py-5">
         <div className="container">
           <h2  
-            style={{fontFamily: 'Georgia, serif', letterSpacing: '1px'}}
+            style={{ fontFamily: 'Roboto Slab, serif', letterSpacing: '0.5px' }}
           >
-                Recomendados De La Semana
+                Recomendados de la semana
           </h2>
           <Carrusel />
         </div>
       </div>
 
       
-      <div className="container-fluid py-5 bg-white">
-        <div className="container">
-          <div className="row align-items-center">
+     <div className="container-fluid py-5 bg-white">
+    <div className="container">
+        <div className="row align-items-center">
             {/* Imagen */}
             <div className="col-12 col-lg-6 text-center mb-4 mb-lg-0">
-              <img 
-                src={Imagen01}
-                alt="Café de tueste ligero" 
-                className="img-fluid rounded shadow"
-                style={{ maxHeight: '400px', objectFit: 'contain', width: '100%', maxWidth: '500px' }}
-              />
+                <img
+                    src={Imagen01}
+                    alt="Café de tueste ligero"
+                    className="img-fluid rounded shadow"
+                    style={{}} 
+                />
             </div>
 
             {/* Texto */}
             <div className="col-12 col-lg-6 text-center text-lg-start">
-              <h2 
-                className="display-4 fw-normal text-dark mb-3" 
-                style={{fontFamily: 'Georgia, serif', letterSpacing: '1px'}}
-              >
-                Arte en cada taza
-              </h2>
-              <p 
-                className="mb-4 text-dark fs-5" 
-                style={{
-                  fontFamily: 'Arial, sans-serif', 
-                  fontWeight: '300', 
-                  lineHeight: '1.6'
-                }}
-              >
-                8 creaciones exclusivas para paladares exigentes
-              </p>
-              <Link 
-                to="/carta" 
-                className="btn btn-lg px-4 text-white" 
-                style={{
-                  backgroundColor: '#8B4513', 
-                  borderColor: '#8B4513'
-                }}
-              >
-                Consulta nuestra carta
-              </Link>
+                <h2
+                    className="display-4 fw-normal text-dark mb-3"
+                     style={{ fontFamily: 'Roboto Slab, serif', letterSpacing: '0.5px' }}
+                >
+                    ¿Listo para un respiro delicioso?
+                </h2>
+                <p
+                    className="mb-4 text-dark fs-5"
+                    style={{
+                        fontFamily: 'Arial, sans-serif',
+                        fontWeight: '300',
+                        lineHeight: '1.6'
+                    }}
+                >
+                   En nuestra carta, te esperan cafés cuidadosamente seleccionados y preparados con cariño, junto con una variedad de acompañantes que harán tu momento aún más especial.
+                   Tómate un momento para explorar y descubrir tus combinaciones favoritas.
+                </p>
+                <Link
+                    to="/carta#inicio-carta"
+                    className="btn btn-lg px-4 text-white"
+                    style={{
+                        backgroundColor: '#8B4513',
+                        borderColor: '#8B4513'
+                    }}
+                >
+                    Consulta nuestra carta
+                </Link>
             </div>
-          </div>
         </div>
-      </div>
     </div>
+</div>
+</div>
   );
 }
 
