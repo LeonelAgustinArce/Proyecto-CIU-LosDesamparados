@@ -77,3 +77,60 @@
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
 }
+
+.btn-agregar {
+  background-color: #A67B5B; 
+  border: 1px solid #A67B5B;
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.btn-agregar:hover {
+  background-color: #8B6B4D;
+  border-color: #8B6B4D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.btn-agregar:active {
+  background-color: #6E4D37;
+  border-color: #6E4D37;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-acompañante {
+  background-color: #A67B5B; 
+  border: 1px solid #A67B5B;
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-acompañante:hover {
+  background-color: #8B6B4D;
+  border-color: #8B6B4D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-acompañante:active {
+  background-color: #6E4D37;
+  border-color: #6E4D37;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}

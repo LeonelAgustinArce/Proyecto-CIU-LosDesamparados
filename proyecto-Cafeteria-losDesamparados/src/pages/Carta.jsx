@@ -1,4 +1,5 @@
 import React from 'react';
+import "../App.css";
 import { useState, useEffect } from "react";
 import Americano from '../assets/cafe-01.webp';
 import Latte from '../assets/cafe-02.webp';
@@ -95,7 +96,7 @@ function Carta() {
   return (
     <div className="container-fluid bg-light p-5">
       
-      {/* Sección Cafés */}
+      // ESTA ES LA SECCION DE CAFES
       <div className="row">
         <div className="col-12">
           <h2 id="inicio-carta">Cafés</h2>
@@ -114,25 +115,8 @@ function Carta() {
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">Precio: ${producto.precio}</p>
                 <div className="mt-auto">
-                  <button 
-                    className="btn btn-sm w-100"
-                    onClick={() => agregarAlCarrito(producto.id)}
-                    style={{
-                      backgroundColor: '#A67B5B',
-                      borderColor: '#A67B5B',
-                      color: 'white'
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor = '#8B6B4D';
-                      e.target.style.borderColor = '#8B6B4D';
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor = '#A67B5B';
-                      e.target.style.borderColor = '#A67B5B';
-                    }}
-                  >
-                    + Agregar al carrito
-                  </button>
+                  <button className="btn-agregar btn-sm w-100"
+                    onClick={() => agregarAlCarrito(producto.id)}>+ Agregar al carrito</button>
                   <p className="mt-2 mb-0 text-center">En carrito: {obtenerCantidad(producto.id)}</p>
                 </div>
               </div>
@@ -141,7 +125,7 @@ function Carta() {
         ))}
       </div>
 
-      {/* Sección Acompañantes */}
+      // ESTA ES LA SECCION DE ACOMPAÑANTES
       <div className="row mt-5">
         <div className="col-12">
           <h2>Acompañantes</h2>
@@ -160,25 +144,8 @@ function Carta() {
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">Precio: ${producto.precio}</p>
                 <div className="mt-auto">
-                  <button 
-                    className="btn btn-sm w-100"
-                    onClick={() => agregarAlCarrito(producto.id)}
-                    style={{
-                      backgroundColor: '#A67B5B',
-                      borderColor: '#A67B5B',
-                      color: 'white'
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor = '#8B6B4D';
-                      e.target.style.borderColor = '#8B6B4D';
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor = '#A67B5B';
-                      e.target.style.borderColor = '#A67B5B';
-                    }}
-                  >
-                    + Agregar al carrito
-                  </button>
+                  <button className="btn-acompañante btn-sm w-100"
+                    onClick={() => agregarAlCarrito(producto.id)}>+ Agregar al carrito</button>
                   <p className="mt-2 mb-0 text-center">En carrito: {obtenerCantidad(producto.id)}</p>
                 </div>
               </div>
@@ -186,13 +153,6 @@ function Carta() {
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .btn:hover {
-          transform: translateY(-2px);
-          transition: all 0.2s ease;
-        }
-      `}</style>
     </div>
   );
 }
