@@ -31,7 +31,7 @@ function Reserva() {
 
   
     setError('');
-    setMensajeExito('Nos pondremos en contacto contigo pronto.');
+    setMensajeExito('¡Gracias por tu reserva!');
     setTimeout(() => {
       setMensajeExito('');
     }, 3000);
@@ -70,7 +70,17 @@ function Reserva() {
                 <label htmlFor="mensaje" className="form-label">Mensaje</label>
                 <textarea className="form-control" id="mensaje" rows="3" placeholder="Detalles de la reserva" value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
               </div>
-              <button type="submit" className="btn btn-primary">Enviar</button>
+             <button 
+  type="submit" 
+  className="btn" 
+  style={{
+    backgroundColor: '#A67B5B',
+    borderColor: '#A67B5B',
+    color: 'white'
+  }}
+>
+  Enviar
+</button>
             </form>
           </div>
         </div>

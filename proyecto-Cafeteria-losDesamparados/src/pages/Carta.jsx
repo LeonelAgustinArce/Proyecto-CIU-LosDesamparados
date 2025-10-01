@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Americano from '../assets/cafe-01.webp';
 import Latte from '../assets/cafe-02.webp';
 import Cappuccino from '../assets/cafe-03.webp';
@@ -9,7 +9,6 @@ import Macchiato from '../assets/cafe-06.webp';
 import IcedCoffe from '../assets/cafe-07.webp';
 import LatteMacchiato from '../assets/cafe-latte-macchiato.webp';
 import CaramelMacchiato from '../assets/cafe-caramel-macchiato.webp';
-
 
 import Acom01 from '../assets/acom-01.webp';
 import Acom02 from '../assets/acom-02.webp';
@@ -22,9 +21,21 @@ import Acom08 from '../assets/acom-08.webp';
 import Acom09 from '../assets/acom-09.webp';
 import Acom10 from '../assets/acom-10.webp';
 
-
 function Carta() {
-  const [cantidades, setCantidades] = useState(0);
+  const [carrito, setCarrito] = useState([]);
+
+  // Cargar carrito desde localStorage al iniciar
+  useEffect(() => {
+    const carritoGuardado = localStorage.getItem('carrito');
+    if (carritoGuardado) {
+      setCarrito(JSON.parse(carritoGuardado));
+    }
+  }, []);
+
+  // Guardar carrito en localStorage cuando cambie
+  useEffect(() => {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+  }, [carrito]);
 
   const cafes = [
     { id: 1, nombre: 'Americano', imagen: Americano, precio: 6200 },
@@ -50,11 +61,35 @@ function Carta() {
     { id: 18, nombre: 'Bizcocho', imagen: Acom09, precio: 3300 },
     { id: 19, nombre: 'Tostada de Aguacate', imagen: Acom10, precio: 4500 },
   ];
+
+  // Combinar todos los productos
+  const todosProductos = [...cafes, ...acompanantes];
+
   const agregarAlCarrito = (id) => {
-    setCantidades(prev => ({
-      ...prev,
-      [id]: (prev[id] || 0) + 1  
-    }));
+    const producto = todosProductos.find(p => p.id === id);
+    if (!producto) return;
+
+    setCarrito(prevCarrito => {
+      const itemExistente = prevCarrito.find(item => item.id === id);
+      
+      if (itemExistente) {
+        // Si ya existe, aumentar cantidad
+        return prevCarrito.map(item =>
+          item.id === id 
+            ? { ...item, cantidad: item.cantidad + 1 }
+            : item
+        );
+      } else {
+        // Si no existe, agregar nuevo item
+        return [...prevCarrito, { ...producto, cantidad: 1 }];
+      }
+    });
+  };
+
+  // Obtener cantidad de un producto específico
+  const obtenerCantidad = (id) => {
+    const item = carrito.find(item => item.id === id);
+    return item ? item.cantidad : 0;
   };
 
   return (
@@ -63,7 +98,7 @@ function Carta() {
       {/* Sección Cafés */}
       <div className="row">
         <div className="col-12">
-          <h2  id="inicio-carta">Cafés </h2>
+          <h2 id="inicio-carta">Cafés</h2>
           <div>
             <p>Nuestra selección de 9 cafés exclusivos</p>
           </div>
@@ -73,13 +108,33 @@ function Carta() {
       <div className="row">
         {cafes.map(producto => (
           <div className="col-md-3 mb-4" key={producto.id}>
-            <div className="card">
-              <img src={producto.imagen} className="card-img-top" alt={producto.nombre} />
-              <div className="card-body">
+            <div className="card h-100">
+              <img src={producto.imagen} className="card-img-top" alt={producto.nombre} style={{height: '200px', objectFit: 'cover'}} />
+              <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">Precio: ${producto.precio}</p>
-                <button className="btn-minimal" onClick={() => agregarAlCarrito(producto.id)}> Agregar al carrito</button>
-                <p>Cantidad: {cantidades[producto.id] || 0}</p>
+                <div className="mt-auto">
+                  <button 
+                    className="btn btn-sm w-100"
+                    onClick={() => agregarAlCarrito(producto.id)}
+                    style={{
+                      backgroundColor: '#A67B5B',
+                      borderColor: '#A67B5B',
+                      color: 'white'
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.backgroundColor = '#8B6B4D';
+                      e.target.style.borderColor = '#8B6B4D';
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.backgroundColor = '#A67B5B';
+                      e.target.style.borderColor = '#A67B5B';
+                    }}
+                  >
+                    + Agregar al carrito
+                  </button>
+                  <p className="mt-2 mb-0 text-center">En carrito: {obtenerCantidad(producto.id)}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -99,18 +154,45 @@ function Carta() {
       <div className="row">
         {acompanantes.map(producto => (
           <div className="col-md-3 mb-4" key={producto.id}>
-            <div className="card">
-              <img src={producto.imagen} className="card-img-top" alt={producto.nombre} />
-              <div className="card-body">
+            <div className="card h-100">
+              <img src={producto.imagen} className="card-img-top" alt={producto.nombre} style={{height: '200px', objectFit: 'cover'}} />
+              <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">Precio: ${producto.precio}</p>
-                <button className="btn-minimal" onClick={() => agregarAlCarrito(producto.id)}> Agregar al carrito</button>
-                <p>Cantidad: {cantidades[producto.id] || 0}</p>
+                <div className="mt-auto">
+                  <button 
+                    className="btn btn-sm w-100"
+                    onClick={() => agregarAlCarrito(producto.id)}
+                    style={{
+                      backgroundColor: '#A67B5B',
+                      borderColor: '#A67B5B',
+                      color: 'white'
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.backgroundColor = '#8B6B4D';
+                      e.target.style.borderColor = '#8B6B4D';
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.backgroundColor = '#A67B5B';
+                      e.target.style.borderColor = '#A67B5B';
+                    }}
+                  >
+                    + Agregar al carrito
+                  </button>
+                  <p className="mt-2 mb-0 text-center">En carrito: {obtenerCantidad(producto.id)}</p>
+                </div>
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      <style jsx>{`
+        .btn:hover {
+          transform: translateY(-2px);
+          transition: all 0.2s ease;
+        }
+      `}</style>
     </div>
   );
 }
