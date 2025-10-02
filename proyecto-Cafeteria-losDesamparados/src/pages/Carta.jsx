@@ -25,7 +25,7 @@ import Acom10 from '../assets/acom-10.webp';
 function Carta() {
   const [carrito, setCarrito] = useState([]);
 
-  // Cargar carrito desde localStorage al iniciar
+ 
   useEffect(() => {
     const carritoGuardado = localStorage.getItem('carrito');
     if (carritoGuardado) {
@@ -33,7 +33,7 @@ function Carta() {
     }
   }, []);
 
-  // Guardar carrito en localStorage cuando cambie
+  
   useEffect(() => {
     localStorage.setItem('carrito', JSON.stringify(carrito));
   }, [carrito]);
@@ -63,7 +63,7 @@ function Carta() {
     { id: 19, nombre: 'Tostada de Aguacate', imagen: Acom10, precio: 4500 },
   ];
 
-  // Combinar todos los productos
+ 
   const todosProductos = [...cafes, ...acompanantes];
 
   const agregarAlCarrito = (id) => {
@@ -74,20 +74,20 @@ function Carta() {
       const itemExistente = prevCarrito.find(item => item.id === id);
       
       if (itemExistente) {
-        // Si ya existe, aumentar cantidad
+       
         return prevCarrito.map(item =>
           item.id === id 
             ? { ...item, cantidad: item.cantidad + 1 }
             : item
         );
       } else {
-        // Si no existe, agregar nuevo item
+        
         return [...prevCarrito, { ...producto, cantidad: 1 }];
       }
     });
   };
 
-  // Obtener cantidad de un producto específico
+  
   const obtenerCantidad = (id) => {
     const item = carrito.find(item => item.id === id);
     return item ? item.cantidad : 0;
@@ -96,7 +96,7 @@ function Carta() {
   return (
     <div className="container-fluid bg-light p-5">
       
-      // ESTA ES LA SECCION DE CAFES
+      
       <div className="row">
         <div className="col-12">
           <h2 id="inicio-carta">Cafés</h2>
@@ -125,7 +125,7 @@ function Carta() {
         ))}
       </div>
 
-      // ESTA ES LA SECCION DE ACOMPAÑANTES
+     
       <div className="row mt-5">
         <div className="col-12">
           <h2>Acompañantes</h2>

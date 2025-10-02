@@ -6,7 +6,7 @@ function Carrito() {
   const [carrito, setCarrito] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
 
-  // Cargar carrito desde localStorage al iniciar
+ 
   useEffect(() => {
     const carritoGuardado = localStorage.getItem('carrito');
     if (carritoGuardado) {
@@ -14,7 +14,7 @@ function Carrito() {
     }
   }, []);
 
-  // Función para actualizar cantidad
+  
   const actualizarCantidad = (id, nuevaCantidad) => {
     if (nuevaCantidad < 1) {
       eliminarDelCarrito(id);
@@ -70,7 +70,7 @@ function Carrito() {
         <div className="col-12">
           <h2 className="mb-4">Tu Carrito de Compras</h2>
           
-          {/* Alerta de confirmación */}
+         
           {showAlert && (
             <Alert variant="success" className="mb-4">
               <Alert.Heading>¡Pedido Confirmado!</Alert.Heading>
