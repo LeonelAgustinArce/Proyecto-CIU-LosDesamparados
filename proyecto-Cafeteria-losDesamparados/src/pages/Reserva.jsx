@@ -94,9 +94,9 @@ function Reserva() {
               <div className="mt-3">
                 <p className="mb-2">
                   <strong>📍 Dirección:</strong><br />
-                  Av. Gdor. Vergara 2392<br />
-                  Villa Tesei, Hurlingham<br />
-                  
+                    Tte. Manuel Origone 151<br />
+                    Villa Tesei, Hurlingham<br />
+                    Provincia de Buenos Aires
                 </p>
                 <p className="mb-2">
                   <strong>📞 Teléfono:</strong> (011) 1234-5678
@@ -113,51 +113,47 @@ function Reserva() {
             </div>
 
             
-         
-<div className="bg-white rounded shadow p-4 mb-4">
-  <h3 style={{ color: '#A67B5B' }}>🗺️ Encuéntranos</h3>
-  <div className="mt-3">
-    
-    <div 
-      className="rounded overflow-hidden" 
-      style={{ 
-        height: '250px', 
-        width: '100%',
-        minHeight: '250px',
-        border: '2px solid #A67B5B'
-      }}
-    >
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.396332392782!2d-58.64162392446708!3d-34.64003115938435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf2d2b4b19c5%3A0xea8d2b3b4137f2c7!2sUniversidad%20Nacional%20de%20Hurlingham!5e0!3m2!1ses!2sar!4v1699999999999!5m2!1ses!2sar"
-        width="100%"
-        height="100%"
-        style={{ 
-          border: 0,
-          display: 'block'
-        }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Ubicación de Luna & Granos Café"
-      />
-    </div>
-    <div className="mt-3 text-center">
-      <a 
-        href="https://maps.google.com/?q=Universidad+https://maps.app.goo.gl/HNyns4W1i2nPZ5iq9Nacional+de+Hurlingham,+Av.+Gdor.+Vergara+2392,+Villa+Tesei,+Hurlingham"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn btn-sm"
-        style={{
-          backgroundColor: '#A67B5B',
-          borderColor: '#A67B5B',
-          color: 'white'
-        }}
-      >
-        📍 Abrir en Google Maps
-      </a>
-    </div>
-  </div>
-</div>
+            <div className="bg-white rounded shadow p-4 mb-4">
+              <h3 style={{ color: '#A67B5B' }}>🗺️ Encuéntranos</h3>
+              <div className="mt-3">
+                
+                <div 
+                  className="rounded overflow-hidden" 
+                  style={{ 
+                    height: '250px', 
+                    width: '100%',
+                    minHeight: '250px',
+                    border: '2px solid #A67B5B'
+                  }}
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.515118434625!2d-58.6418529244671!3d-34.63680735948479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf2d2b4b19c5%3A0xea8d2b3b4137f2c7!2sTte.%20Manuel%20Origone%20151%2C%20B1688%20Villa%20Tesei%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1699999999999!5m2!1ses!2sar"
+                    width="100%"
+                    height="100%"
+                    style={{ 
+                      border: 0,
+                      display: 'block'
+                    }}
+                    allowFullScreen=""
+                    loading="lazy"
+                  />
+                </div>
+                <div className="mt-3 text-center">
+                  <a 
+                    href="https://maps.app.goo.gl/UDudxSZsCi3PUJJTA"
+                    target="_blank"
+                    className="btn btn-sm"
+                    style={{
+                      backgroundColor: '#A67B5B',
+                      borderColor: '#A67B5B',
+                      color: 'white'
+                    }}
+                  >
+                    📍 Abrir en Google Maps
+                  </a>
+                </div>
+              </div>
+            </div>
 
             
             <div className="bg-white rounded shadow p-4">
