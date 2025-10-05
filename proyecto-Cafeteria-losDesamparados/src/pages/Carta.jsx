@@ -25,7 +25,6 @@ import Acom10 from '../assets/acom-10.webp';
 function Carta() {
   const [carrito, setCarrito] = useState([]);
 
- 
   useEffect(() => {
     const carritoGuardado = localStorage.getItem('carrito');
     if (carritoGuardado) {
@@ -33,7 +32,6 @@ function Carta() {
     }
   }, []);
 
-  
   useEffect(() => {
     localStorage.setItem('carrito', JSON.stringify(carrito));
   }, [carrito]);
@@ -63,7 +61,6 @@ function Carta() {
     { id: 19, nombre: 'Tostada de Aguacate', imagen: Acom10, precio: 4500 },
   ];
 
- 
   const todosProductos = [...cafes, ...acompanantes];
 
   const agregarAlCarrito = (id) => {
@@ -74,20 +71,17 @@ function Carta() {
       const itemExistente = prevCarrito.find(item => item.id === id);
       
       if (itemExistente) {
-       
         return prevCarrito.map(item =>
           item.id === id 
             ? { ...item, cantidad: item.cantidad + 1 }
             : item
         );
       } else {
-        
         return [...prevCarrito, { ...producto, cantidad: 1 }];
       }
     });
   };
 
-  
   const obtenerCantidad = (id) => {
     const item = carrito.find(item => item.id === id);
     return item ? item.cantidad : 0;
@@ -95,11 +89,9 @@ function Carta() {
 
   return (
     <div className="container-fluid bg-light p-5">
-      
-      
       <div className="row">
         <div className="col-12">
-          <h2 id="inicio-carta">Cafés</h2>
+          <h2 id="inicio-carta" className="carta-titulo-seccion">Cafés</h2>
           <div>
             <p>Nuestra selección de 9 cafés exclusivos</p>
           </div>
@@ -112,11 +104,15 @@ function Carta() {
             <div className="card h-100">
               <img src={producto.imagen} className="card-img-top" alt={producto.nombre} style={{height: '200px', objectFit: 'cover'}} />
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{producto.nombre}</h5>
+                <h5 className="card-title carta-titulo-producto">{producto.nombre}</h5>
                 <p className="card-text">Precio: ${producto.precio}</p>
                 <div className="mt-auto">
-                  <button className="btn-agregar btn-sm w-100"
-                    onClick={() => agregarAlCarrito(producto.id)}>+ Agregar al carrito</button>
+                  <button 
+                    className="btn btn-sm w-100 btn-agregar-carta"
+                    onClick={() => agregarAlCarrito(producto.id)}
+                  >
+                    + Agregar al carrito
+                  </button>
                   <p className="mt-2 mb-0 text-center">En carrito: {obtenerCantidad(producto.id)}</p>
                 </div>
               </div>
@@ -125,10 +121,9 @@ function Carta() {
         ))}
       </div>
 
-     
       <div className="row mt-5">
         <div className="col-12">
-          <h2>Acompañantes</h2>
+          <h2 className="carta-titulo-seccion">Acompañantes</h2>
           <div>
             <p>Perfectos para complementar tu café</p>
           </div>
@@ -141,11 +136,15 @@ function Carta() {
             <div className="card h-100">
               <img src={producto.imagen} className="card-img-top" alt={producto.nombre} style={{height: '200px', objectFit: 'cover'}} />
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{producto.nombre}</h5>
+                <h5 className="card-title carta-titulo-producto">{producto.nombre}</h5>
                 <p className="card-text">Precio: ${producto.precio}</p>
                 <div className="mt-auto">
-                  <button className="btn-acompañante btn-sm w-100"
-                    onClick={() => agregarAlCarrito(producto.id)}>+ Agregar al carrito</button>
+                  <button 
+                    className="btn btn-sm w-100 btn-agregar-carta"
+                    onClick={() => agregarAlCarrito(producto.id)}
+                  >
+                    + Agregar al carrito
+                  </button>
                   <p className="mt-2 mb-0 text-center">En carrito: {obtenerCantidad(producto.id)}</p>
                 </div>
               </div>

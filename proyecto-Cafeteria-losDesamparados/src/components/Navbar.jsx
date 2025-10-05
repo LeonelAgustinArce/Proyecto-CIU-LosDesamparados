@@ -9,12 +9,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          ☕ Luna & Granos Café
-        </Link>
-        
+ <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div className="container-fluid">
+    <Link className="navbar-brand" to="/">
+      <i className="bi bi-cup-hot me-2"></i>
+      Luna & Granos Café
+    </Link>
         <button 
           className="navbar-toggler" 
           type="button" 

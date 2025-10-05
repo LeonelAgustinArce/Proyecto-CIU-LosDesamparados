@@ -90,22 +90,25 @@ function Reserva() {
           <div className="col-lg-6">
             
             <div className="bg-white rounded shadow p-4 mb-4">
-              <h3 style={{ color: '#A67B5B' }}>📞 Información de Contacto</h3>
+              <h3 style={{ color: '#A67B5B' }}>
+                <i className="bi bi-telephone me-2"></i>
+                Información de Contacto
+              </h3>
               <div className="mt-3">
                 <p className="mb-2">
-                  <strong>📍 Dirección:</strong><br />
+                  <strong><i className="bi bi-geo-alt me-2"></i>Dirección:</strong><br />
                     Tte. Manuel Origone 151<br />
                     Villa Tesei, Hurlingham<br />
                     Provincia de Buenos Aires
                 </p>
                 <p className="mb-2">
-                  <strong>📞 Teléfono:</strong> (011) 1234-5678
+                  <strong><i className="bi bi-telephone me-2"></i>Teléfono:</strong> (011) 1234-5678
                 </p>
                 <p className="mb-2">
-                  <strong>📧 Email:</strong> hola@lunaygranos.com
+                  <strong><i className="bi bi-envelope me-2"></i>Email:</strong> hola@lunaygranos.com
                 </p>
                 <p className="mb-0">
-                  <strong>🕒 Horarios:</strong><br />
+                  <strong><i className="bi bi-clock me-2"></i>Horarios:</strong><br />
                   Lunes a Viernes: 7:00 - 21:00<br />
                   Sábados y Domingos: 8:00 - 20:00
                 </p>
@@ -113,51 +116,57 @@ function Reserva() {
             </div>
 
             
-            <div className="bg-white rounded shadow p-4 mb-4">
-              <h3 style={{ color: '#A67B5B' }}>🗺️ Encuéntranos</h3>
-              <div className="mt-3">
-                
-                <div 
-                  className="rounded overflow-hidden" 
+         <div className="bg-white rounded shadow p-4 mb-4">
+            <h3 style={{ color: '#A67B5B' }}>
+              <i className="bi bi-map me-2"></i>
+              Encuéntranos
+            </h3>
+            <div className="mt-3">
+              <div 
+                className="rounded overflow-hidden" 
+                style={{ 
+                  height: '250px', 
+                  width: '100%',
+                  minHeight: '250px',
+                  border: '2px solid #A67B5B'
+                }}
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.515118434625!2d-58.6418529244671!3d-34.63680735948479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf2d2b4b19c5%3A0xea8d2b3b4137f2c7!2sTte.%20Manuel%20Origone%20151%2C%20B1688%20Villa%20Tesei%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1699999999999!5m2!1ses!2sar&amp;output=embed"
+                  width="100%"
+                  height="100%"
                   style={{ 
-                    height: '250px', 
-                    width: '100%',
-                    minHeight: '250px',
-                    border: '2px solid #A67B5B'
+                    border: 0,
+                    display: 'block'
+                  }}
+                  allowFullScreen=""
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-3 text-center">
+                <a 
+                  href="https://maps.app.goo.gl/UDudxSZsCi3PUJJTA"
+                  target="_blank"
+                  className="btn btn-sm"
+                  style={{
+                    backgroundColor: '#A67B5B',
+                    borderColor: '#A67B5B',
+                    color: 'white'
                   }}
                 >
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.515118434625!2d-58.6418529244671!3d-34.63680735948479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf2d2b4b19c5%3A0xea8d2b3b4137f2c7!2sTte.%20Manuel%20Origone%20151%2C%20B1688%20Villa%20Tesei%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1699999999999!5m2!1ses!2sar"
-                    width="100%"
-                    height="100%"
-                    style={{ 
-                      border: 0,
-                      display: 'block'
-                    }}
-                    allowFullScreen=""
-                    loading="lazy"
-                  />
-                </div>
-                <div className="mt-3 text-center">
-                  <a 
-                    href="https://maps.app.goo.gl/UDudxSZsCi3PUJJTA"
-                    target="_blank"
-                    className="btn btn-sm"
-                    style={{
-                      backgroundColor: '#A67B5B',
-                      borderColor: '#A67B5B',
-                      color: 'white'
-                    }}
-                  >
-                    📍 Abrir en Google Maps
-                  </a>
-                </div>
+                  <i className="bi bi-geo-alt me-1"></i>
+                  Abrir en Google Maps
+                </a>
               </div>
             </div>
+          </div>
 
             
             <div className="bg-white rounded shadow p-4">
-              <h3 style={{ color: '#A67B5B' }}>Preguntas Frecuentes</h3>
+              <h3 style={{ color: '#A67B5B' }}>
+                <i className="bi bi-question-circle me-2"></i>
+                Preguntas Frecuentes
+              </h3>
               <div className="mt-3">
                 <div className="mb-3">
                   <h6 className="fw-bold">¿Necesito reservar con anticipación?</h6>
@@ -167,9 +176,9 @@ function Reserva() {
                   <h6 className="fw-bold">¿Aceptan mascotas?</h6>
                   <p className="small mb-0">Sí, tenemos una encantadora terraza exterior pet-friendly donde tus compañeros peludos son bienvenidos.</p>
                 </div>
-                <div className="mb-0">
-                  <h6 className="fw-bold">¿Tienen WiFi?</h6>
-                  <p className="small mb-0">Por supuesto, WiFi gratuito para nuestros clientes. Perfecto para trabajar o estudiar mientras disfrutas de nuestro café.</p>
+               <div className="mb-0">
+                  <h6 className="fw-bold">¿Hay límite de tiempo para quedarse?</h6>
+                  <p className="small mb-0">No tenemos límites. Queremos que disfrutes nuestro espacio tanto como nuestro café, sin prisas.</p>
                 </div>
               </div>
             </div>

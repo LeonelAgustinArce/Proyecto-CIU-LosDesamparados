@@ -59,15 +59,17 @@ function Home() {
         <div className="seccionprincipal-contenido">
           <div className="seccionprincipal-texto">
             <h1 className="seccionprincipal-titulo">Luna & Granos</h1>
-            <p className="seccionprincipal-subtitulo">
-              Un espacio para disfrutar de un café excepcional, 
-              en un ambiente que inspira calma y deleite.
-            </p>
+             <p className="seccionprincipal-subtitulo">
+                El único antidepresivo<br />
+                que viene en una taza
+              </p>
             <div className="seccionprincipal-botones">
               <HashLink to="/carta#inicio-carta" className="btn-home-primary">
+                <i className="bi bi-cup-hot me-2"></i>
                 Ver Carta
               </HashLink>
               <Link to="/reserva" className="btn-home-secondary">
+                <i className="bi bi-calendar-check me-2"></i>
                 Reservar Mesa
               </Link>
             </div>
@@ -81,22 +83,30 @@ function Home() {
           <h2 className="section-title">¿Por qué elegirnos?</h2>
           <div className="seccion-elegirnos-grid">
             <div className="seccion-elegirnos-card">
-              <div className="seccion-elegirnos-icono">☕</div>
+              <div className="seccion-elegirnos-icono">
+                <i className="bi bi-cup-hot"></i>
+              </div>
               <h3>Café de Calidad</h3>
               <p>Granos seleccionados de las mejores regiones cafetaleras del mundo</p>
             </div>
             <div className="seccion-elegirnos-card">
-              <div className="seccion-elegirnos-icono">🍰</div>
+              <div className="seccion-elegirnos-icono">
+                <i className="bi bi-cake2"></i>
+              </div>
               <h3>Postres Caseros</h3>
-              <p>Deliciosos pasteles y postres preparados diariamente con ingredientes frescos</p>
+              <p>Deliciosas galletas y postres preparados diariamente con ingredientes frescos</p>
             </div>
             <div className="seccion-elegirnos-card">
-              <div className="seccion-elegirnos-icono">🌱</div>
+              <div className="seccion-elegirnos-icono">
+                <i className="bi bi-flower1"></i>
+              </div>
               <h3>Ambiente Natural</h3>
               <p>Un espacio acogedor con decoración natural, plantas y luz natural</p>
             </div>
             <div className="seccion-elegirnos-card">
-              <div className="seccion-elegirnos-icono">📶</div>
+              <div className="seccion-elegirnos-icono">
+                <i className="bi bi-wifi"></i>
+              </div>
               <h3>WiFi Gratis</h3>
               <p>Conéctate y trabaja mientras disfrutas de tu café favorito</p>
             </div>
@@ -125,6 +135,7 @@ function Home() {
           </div>
           <div className="seccion-favoritos-cta">
             <HashLink to="/carta#inicio-carta" className="btn-home-primary">
+              <i className="bi bi-arrow-right-circle me-2"></i>
               Descubre los tuyos
             </HashLink>
           </div>

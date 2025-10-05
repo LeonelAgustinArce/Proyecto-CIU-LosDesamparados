@@ -21,7 +21,6 @@
   background-color: #54ccd4; 
 }
 
-
 .home-container {
   width: 100%;
   overflow-x: hidden;
@@ -53,25 +52,31 @@
 }
 
 .seccionprincipal-titulo {
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  font-family: 'Roboto Slab', serif;
-  letter-spacing: 0.5px;
-  font-size: 3.5rem;
+  color: #795548;
+  text-shadow: 
+    0 0 2px rgba(255,255,255,0.9),
+    0 0 6px rgba(255,255,255,0.6),
+    1px 1px 2px rgba(0,0,0,0.25);
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.8px;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
 
 .seccionprincipal-subtitulo {
-  color: #fffbea;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-  font-family: 'Roboto Slab', serif;
-  font-size: 1.3rem;
+  color: #795548;
+  text-shadow: 
+    0 0 2px rgba(255,255,255,0.9),
+    0 0 4px rgba(255,255,255,0.7),
+    1px 1px 2px rgba(0,0,0,0.25);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
   margin-bottom: 2.5rem;
-  line-height: 1.6;
-  font-weight: 300;
-  opacity: 0.9;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 0.8px;
 }
 
 .seccionprincipal-botones {
@@ -81,7 +86,7 @@
   flex-wrap: wrap;
 }
 
-/* Sección Elegirnos */
+/* Sección Elegirnos - Actualizado */
 .seccion-elegirnos {
   padding: 5rem 2rem;
   background-color: #f8f9fa;
@@ -96,9 +101,9 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #8B4513;
-  font-family: 'Roboto Slab', serif;
-  letter-spacing: 0.5px;
+  color: #A67B5B;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
   font-weight: 400;
 }
 
@@ -129,8 +134,8 @@
 .seccion-elegirnos-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #8B4513;
-  font-family: 'Roboto Slab', serif;
+  color: #A67B5B;
+  font-family: 'Playfair Display', serif;
 }
 
 .seccion-elegirnos-card p {
@@ -140,7 +145,7 @@
   font-weight: 300;
 }
 
-/* Sección Favoritos */
+/* Sección Favoritos - Actualizado */
 .seccion-favoritos {
   padding: 5rem 2rem;
   background-color: white;
@@ -184,8 +189,8 @@
 .seccion-favoritos-item h3 {
   padding: 1rem 1rem 0.5rem;
   font-size: 1.25rem;
-  color: #8B4513;
-  font-family: 'Roboto Slab', serif;
+  color: #A67B5B;
+  font-family: 'Playfair Display', serif;
 }
 
 .seccion-favoritos-item p {
@@ -202,18 +207,56 @@
   padding: 0 1rem 1rem;
   font-weight: bold;
   font-size: 1.25rem;
-  color: #8B4513;
+  color: #A67B5B;
 }
 
 .seccion-favoritos-cta {
   text-align: center;
 }
 
+/* Estilos para la Carta */
+.carta-titulo-seccion {
+  color: #A67B5B;
+}
+
+.carta-titulo-producto {
+  color: #A67B5B;
+}
+
+.btn-agregar-carta,
+.card .btn-agregar-carta,
+.card-body .btn-agregar-carta,
+.btn-agregar,
+.btn-acompañante,
+.card .btn-agregar,
+.card .btn-acompañante,
+.card-body .btn-agregar,
+.card-body .btn-acompañante {
+  background-color: #A67B5B !important;
+  border-color: #A67B5B !important;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+.btn-agregar-carta:hover,
+.card .btn-agregar-carta:hover,
+.card-body .btn-agregar-carta:hover,
+.btn-agregar:hover,
+.btn-acompañante:hover,
+.card .btn-agregar:hover,
+.card .btn-acompañante:hover,
+.card-body .btn-agregar:hover,
+.card-body .btn-acompañante:hover {
+  background-color: #8B5A3C !important;
+  border-color: #8B5A3C !important;
+  color: white !important;
+}
+
 /* Botones de Home */
 .btn-home-primary {
-  background-color: #A67B5B; 
-  border: 1px solid #A67B5B;
-  color: white;
+  background-color: #A67B5B !important; 
+  border: 1px solid #A67B5B !important;
+  color: white !important;
   font-weight: 500;
   padding: 12px 24px;
   border-radius: 6px;
@@ -227,9 +270,9 @@
 }
 
 .btn-home-secondary {
-  background-color: #C49A6C; 
-  border: 1px solid #C49A6C;
-  color: white;
+  background-color: #C49A6C !important; 
+  border: 1px solid #C49A6C !important;
+  color: white !important;
   font-weight: 500;
   padding: 12px 24px;
   border-radius: 6px;
@@ -248,13 +291,13 @@
 }
 
 .btn-home-primary:hover {
-  background-color: #8B6B4D;
-  border-color: #8B6B4D;
+  background-color: #8B6B4D !important;
+  border-color: #8B6B4D !important;
 }
 
 .btn-home-secondary:hover {
-  background-color: #A67B5B;
-  border-color: #A67B5B;
+  background-color: #A67B5B !important;
+  border-color: #A67B5B !important;
 }
 
 .btn-home-primary:active, .btn-home-secondary:active {
@@ -262,55 +305,60 @@
   box-shadow: none;
 }
 
-/* Botones para otros componentes */
-.btn-agregar {
-  background-color: #A67B5B; 
-  border: 1px solid #A67B5B;
-  color: white;
-  font-weight: 500;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
+
+/*Carrito*/
+
+.alert-cafe {
+  background-color: #FDF8F0;
+  border-color: #A67B5B;
+  color: #6D4C41;
+  border-left: 4px solid #A67B5B;
+}
+
+.alert-cafe .alert-heading {
+  color: #A67B5B;
+  font-weight: 600;
+}
+
+.btn-vaciar-carrito {
+  background-color: white !important;
+  border: 2px solid #A67B5B !important;
+  color: #A67B5B !important;
   transition: all 0.3s ease;
 }
 
-.btn-agregar:hover {
-  background-color: #8B6B4D;
-  border-color: #8B6B4D;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.btn-vaciar-carrito:hover {
+  background-color: #A67B5B !important;
+  border-color: #A67B5B !important;
+  color: white !important;
 }
 
-.btn-agregar:active {
-  background-color: #6E4D37;
-  border-color: #6E4D37;
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-.btn-acompañante {
-  background-color: #A67B5B; 
-  border: 1px solid #A67B5B;
-  color: white;
-  font-weight: 500;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
+.btn-eliminar-producto {
+  background-color: #A67B5B !important;
+  border-color: #A67B5B !important;
+  color: white !important;
   transition: all 0.3s ease;
 }
 
-.btn-acompañante:hover {
-  background-color: #8B6B4D;
-  border-color: #8B6B4D;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.btn-eliminar-producto:hover {
+  background-color: #8B5A3C !important;
+  border-color: #8B5A3C !important;
+  color: white !important;
 }
 
-.btn-acompañante:active {
-  background-color: #6E4D37;
-  border-color: #6E4D37;
-  transform: translateY(0);
-  box-shadow: none;
+.btn-confirmar-pedido {
+  background-color: #A67B5B !important;
+  border-color: #A67B5B !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  padding: 10px 0;
+  font-size: 1.1rem;
+}
+
+.btn-confirmar-pedido:hover {
+  background-color: #8B5A3C !important;
+  border-color: #8B5A3C !important;
+  color: white !important;
 }
 
 /* Seccion resposiva */
@@ -393,7 +441,6 @@
     font-size: 0.9rem;
   }
 }
-
 
 @media (max-width: 480px) {
   .seccionprincipal-titulo {
