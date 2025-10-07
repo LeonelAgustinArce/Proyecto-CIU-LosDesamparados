@@ -156,9 +156,9 @@ function Carrito() {
                   </div>
                     <div className="col-md-4">
                       <div className="bg-white rounded shadow p-4">
-                        <h5 style={{ color: '#A67B5B' }}>Resumen del Pedido</h5>
-                        <p>Total de items: {calcularTotalItems()}</p>
-                        <h4 style={{ color: '#A67B5B' }}>Total: ${calcularTotal()}</h4>
+                        <h4 style={{ color: '#A67B5B' }}>Resumen del Pedido</h4>
+                        <p>Cantidad de productos: {calcularTotalItems()}</p>
+                        <h5 style={{ color: '#A67B5B' }}>Total: ${calcularTotal()}</h5>
                         <button 
                           className="btn w-100 mt-3 btn-confirmar-pedido"
                           onClick={confirmarPedido}

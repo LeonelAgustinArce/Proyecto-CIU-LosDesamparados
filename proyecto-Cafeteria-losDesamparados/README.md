@@ -12,7 +12,7 @@ La app permite a los clientes de **Luna & Granos Café**:
 ## 🚀 Tecnologías utilizadas
 - React con componentes funcionales y hooks (`useState`, `useEffect`).
 - React Router DOM para la navegación.
-- Framework CSS: Bootstrap.
+- Framework CSS: Bootstrap, React-bootstrap.
 - Buenas prácticas de diseño UX/UI.
 
 ## 📂 Estructura de la aplicación
@@ -32,5 +32,7 @@ https://github.com/LeonelAgustinArce/Proyecto-CIU-LosDesamparados/
 - Hacer click en el localhost de la terminal.
 
 ## 👨‍💻 Integrantes
+
+- Leonel Agustin Arce - Email: Leonelagustin.arce@estudiantes.unahur.edu.ar
 
 PONER LOS INTEGRANTES CON EL CORREO ELECTRONICO

@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.light-mode {
+  .btn-minimal {
+    background-color: #c96213;
+    color: #fffbea; 
+  }
+}
+
+.dark-mode {
+  .btn-minimal {
+    background-color: #333;
+    color: #fffbea;
+  }
+}
+
 .btn-minimal {
   background-color: #c96213;
   color: #fffbea; 
