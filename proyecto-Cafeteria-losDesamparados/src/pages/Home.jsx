@@ -18,7 +18,7 @@ function Home() {
 
   
   const productosCarta = [
-    { id: 1, nombre: 'Americano', imagen: Americano, precio: 6200, tipo: 'cafe' },
+    { id: 1, nombre: 'Americano', imagen: Americano, precio: 6200,   tipo: 'cafe' },
     { id: 2, nombre: 'Cappuccino', imagen: Cappuccino, precio: 7800, tipo: 'cafe' },
     { id: 3, nombre: 'Caramel Macchiato', imagen: CaramelMacchiato, precio: 10000, tipo: 'cafe' },
     { id: 4, nombre: 'Espresso', imagen: Espresso, precio: 8500, tipo: 'cafe' },

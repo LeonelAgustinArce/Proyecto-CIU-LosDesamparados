@@ -9,7 +9,7 @@ function Navbar() {
   };
 
   return (
- <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#A67B5B' }}>
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">
       <i className="bi bi-cup-hot me-2"></i>
