@@ -35,4 +35,4 @@ https://github.com/LeonelAgustinArce/Proyecto-CIU-LosDesamparados/
 
 - Leonel Agustin Arce - Email: Leonelagustin.arce@estudiantes.unahur.edu.ar
 
-PONER LOS INTEGRANTES CON EL CORREO ELECTRONICO
+- Máximo Avalos - Email: Maxiavalos07@gmail.com
