@@ -82,17 +82,13 @@ function Carrito() {
                     <p className="mb-0">
                       Gracias por tu compra en Luna & Granos Café.
                     </p>
-                  </Alert>
-                )}
-              
+                  </Alert>)}
               {carrito.length === 0 ? (
                 <div className="text-center py-5">
                   <p className="fs-5 text-muted">Tu carrito está vacío</p>
                   <p>¡Visita nuestra carta para agregar productos!</p>
-                </div>
-              ) : (
-                <>
-                  {/* Lista de productos en el carrito */}
+                </div>) : 
+                (<>
                   {carrito.map(item => (
                     <div key={item.id} className="card mb-3 shadow-sm">
                       <div className="card-body">
@@ -102,8 +98,7 @@ function Carrito() {
                               src={item.imagen} 
                               alt={item.nombre}
                               className="img-fluid rounded"
-                              style={{width: '80px', height: '80px', objectFit: 'cover'}}
-                            />
+                              style={{width: '80px', height: '80px', objectFit: 'cover'}}/>
                           </div>
                           <div className="col-md-4">
                             <h5 className="card-title mb-1">{item.nombre}</h5>
@@ -113,16 +108,12 @@ function Carrito() {
                             <div className="d-flex align-items-center">
                               <button 
                                 className="btn btn-outline-secondary btn-sm"
-                                onClick={() => actualizarCantidad(item.id, item.cantidad - 1)}
-                              >
-                                -
+                                onClick={() => actualizarCantidad(item.id, item.cantidad - 1)}> -
                               </button>
                               <span className="mx-3 fs-5">{item.cantidad}</span>
                               <button 
                                 className="btn btn-outline-secondary btn-sm"
-                                onClick={() => actualizarCantidad(item.id, item.cantidad + 1)}
-                              >
-                                +
+                                onClick={() => actualizarCantidad(item.id, item.cantidad + 1)}> +
                               </button>
                             </div>
                           </div>
@@ -133,8 +124,7 @@ function Carrito() {
                             <button 
                               className="btn btn-sm btn-eliminar-producto"
                               onClick={() => eliminarDelCarrito(item.id)}
-                              title="Eliminar producto"
-                            >
+                              title="Eliminar producto">
                               <i className="bi bi-trash"></i>
                             </button>
                           </div>
@@ -142,16 +132,12 @@ function Carrito() {
                       </div>
                     </div>
                   ))}
-                  
-                  
                   <div className="row mt-4">
                   <div className="col-md-8">
                     <button 
                       className="btn btn-vaciar-carrito"
-                      onClick={vaciarCarrito}
-                    >
-                      <i className="bi bi-cart-x me-2"></i>
-                      Vaciar Carrito
+                      onClick={vaciarCarrito}>
+                      <i className="bi bi-cart-x me-2"></i>Vaciar Carrito
                     </button>
                   </div>
                     <div className="col-md-4">
@@ -161,10 +147,8 @@ function Carrito() {
                         <h5 style={{ color: '#A67B5B' }}>Total: ${calcularTotal()}</h5>
                         <button 
                           className="btn w-100 mt-3 btn-confirmar-pedido"
-                          onClick={confirmarPedido}
-                        >
-                          <i className="bi bi-check-circle me-2"></i>
-                          Confirmar Pedido
+                          onClick={confirmarPedido}>
+                          <i className="bi bi-check-circle me-2"></i>Confirmar Pedido
                         </button>
                       </div>
                     </div>

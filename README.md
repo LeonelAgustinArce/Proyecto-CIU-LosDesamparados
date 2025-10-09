@@ -22,6 +22,10 @@ La app permite a los clientes de **Luna & Granos Café**:
 - **Contacto/Reservas**: Formulario controlado con validaciones.
 - **Navegación**: Barra para acceder a todas las secciones.
 
+## 🧰 Extras
+- **Filtros de busqueda**: Mas relevantes - Menos precio - Mayor precio
+- **Persistencia del carrito**: Utilizando **localStorage** 
+
 ## ⚙️ Instalación y ejecución en local
 - Requisitos previos: Tener instalado Node.js (versión LTS recomendada).
 - Clonar el repositorio:
@@ -35,4 +39,8 @@ https://github.com/LeonelAgustinArce/Proyecto-CIU-LosDesamparados/
 
 - Leonel Agustin Arce              Email: Leonelagustin.arce@estudiantes.unahur.edu.ar
 - Máximo Alexander Avalos          Email: Maxiavalos07@gmail.com
-- Eliel Dario Remonda              Email: 
+- Eliel Dario Remonda              Email: elieldario.remonda@estudiantes.unahur.edu.ar
+
+## 🎯 Presentación
+
+- [**Presentación del proyecto**](https://gamma.app/docs/Luna-Granos-Cafe-2ee751ccsisansx?mode=present#card-fj8z6k1358ocpra)
